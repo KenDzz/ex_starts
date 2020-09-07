@@ -6,6 +6,10 @@
     $result_price = $price - $result;
     $result1 = number_format($result_price , 2);
     $result_2 = number_format($result , 2);
+	$list_price_f = "$".number_format($price, 2);
+    $discount_percent_f = $percent."%";
+    $discount_f = "$".number_format($result, 2);
+    $discount_price_f = "$".number_format($result_price, 2);
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,16 +25,16 @@
         <span><?php echo 'Name Product: '.$product_description; ?></span><br>
 
         <label>List Price:</label>
-        <span><?php echo '$'.$price; ?></span><br>
+        <span><?php echo $list_price_f; ?></span><br>
 
         <label>Standard Discount:</label>
-        <span><?php echo $percent.'%'; ?></span><br>
+        <span><?php echo $discount_percent_f; ?></span><br>
 
         <label>Discount Amount:</label>
-        <span><?php echo '$'.$result1; ?></span><br>
+        <span><?php echo $discount_f; ?></span><br>
 
         <label>Discount Price:</label>
-        <span><?php echo '$'.$result_2; ?></span><br>
+        <span><?php echo $discount_price_f; ?></span><br>
     </main>
 </body>
 </html>
